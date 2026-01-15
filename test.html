@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbell Velocity & RPE Tracker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-gray-100 min-h-screen p-4 md:p-8 font-sans">
+
+    <div class="max-w-4xl mx-auto">
+        <header class="mb-8 text-center md:text-left">
+            <h1 class="text-3xl font-bold text-blue-500 mb-2">Strength Engine v1.0</h1>
+            <p class="text-gray-400 mb-6">Enter your 1RM to update your training targets.</p>
+            
+            <div class="flex flex-col md:flex-row gap-4 items-center">
+                <div class="w-full md:w-64">
+                    <label class="block text-xs uppercase tracking-widest text-gray-500 mb-1">One Rep Max (LBS/KG)</label>
+                    <input type="number" id="maxInput" value="500" 
+                           class="w-full bg-gray-800 border border-gray-700 text-white px-4 py-3 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none text-xl font-mono">
+                </div>
+                <button onclick="calculateTable()" 
+                        class="w-full md:w-auto mt-5 bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-8 rounded-lg transition-all active:scale-95">
+                    Update Table
+                </button>
+            </div>
+        </header>
+
+        <div class="bg-gray-800 rounded-xl shadow-2xl overflow-hidden border border-gray-700">
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-gray-700 text-gray-300 text-xs uppercase tracking
